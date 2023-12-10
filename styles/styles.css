@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(rgb(15, 152, 243), rgb(255, 238, 0), green);
+
+  overflow: hidden;
+}
+
+#birthday-box {
+  text-align: center;
+  position: relative;
+}
+
+#birthday-text {
+  font-size: 44px;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: -webkit-linear-gradient(#7829f7, #940771);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: font-size 0.5s ease, text-shadow 0.5s ease;
+}
+
+#birthday-text:hover {
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.span {
+  font-size: 30px;
+  transition: font-size 0.5s ease, text-shadow 0.5s ease;
+}
+.span:hover {
+  font-size: 44px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  background-color: #e44d26;
+  position: absolute;
+  animation: fall linear infinite;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
